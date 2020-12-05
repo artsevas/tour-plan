@@ -690,19 +690,23 @@ template {
   .logo {
     width: 99px;
   }
+  .stars {
+    -ms-flex-preferred-size: 15%;
+        flex-basis: 15%;
+  }
 }
 
 @media (max-width: 480px) {
   .stars {
-    -ms-flex-preferred-size: 17%;
-        flex-basis: 17%;
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
   }
 }
 
 @media (max-width: 320px) {
   .stars {
-    -ms-flex-preferred-size: 20%;
-        flex-basis: 20%;
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
   }
 }
 /*# sourceMappingURL=style.css.map */
