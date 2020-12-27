@@ -100,6 +100,7 @@
     max-width: 576px
     width: 92%
   .navbar
+    overflow: auto
     &-bottom
       display: none
       position: fixed
@@ -112,6 +113,7 @@
         display: block
     &-menu
       flex-direction: column
+      overflow-y: scroll
       &__item
         margin-bottom: 20px
         &--mobile
@@ -337,7 +339,15 @@
       height: 500px
       &__text
         display: none
+  .search
+    &__input
+      width: 315px
+    &__button
+      width: 50px
 
 @media (max-width: 320px)
   .stars
     flex-basis: 25%
+  .search
+    &__input
+      width: 260px

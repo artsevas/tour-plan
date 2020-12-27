@@ -1664,6 +1664,9 @@ template {
     max-width: 576px;
     width: 92%;
   }
+  .navbar {
+    overflow: auto;
+  }
   .navbar-bottom {
     display: none;
     position: fixed;
@@ -1681,6 +1684,7 @@ template {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    overflow-y: scroll;
   }
   .navbar-menu__item {
     margin-bottom: 20px;
@@ -2021,12 +2025,21 @@ template {
   .packages-card__text {
     display: none;
   }
+  .search__input {
+    width: 315px;
+  }
+  .search__button {
+    width: 50px;
+  }
 }
 
 @media (max-width: 320px) {
   .stars {
     -ms-flex-preferred-size: 25%;
         flex-basis: 25%;
+  }
+  .search__input {
+    width: 260px;
   }
 }
 /*# sourceMappingURL=style.css.map */
