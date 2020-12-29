@@ -96,11 +96,12 @@
 @media (max-width: 768px)
   body
     padding-top: 78px
+  .body
+    overflow: hidden
   .container
     max-width: 576px
     width: 92%
   .navbar
-    overflow: auto
     &-bottom
       display: none
       position: fixed
@@ -111,9 +112,9 @@
       padding-top: 30px
       &--visible
         display: block
+        overflow: scroll
     &-menu
       flex-direction: column
-      overflow-y: scroll
       &__item
         margin-bottom: 20px
         &--mobile
@@ -147,6 +148,7 @@
       border: none
       background-color: $light
       cursor: pointer
+      outline: none
       &__line
         width: 16px
         height: 1px

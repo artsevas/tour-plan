@@ -1660,12 +1660,12 @@ template {
   body {
     padding-top: 78px;
   }
+  .body {
+    overflow: hidden;
+  }
   .container {
     max-width: 576px;
     width: 92%;
-  }
-  .navbar {
-    overflow: auto;
   }
   .navbar-bottom {
     display: none;
@@ -1678,13 +1678,13 @@ template {
   }
   .navbar-bottom--visible {
     display: block;
+    overflow: scroll;
   }
   .navbar-menu {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    overflow-y: scroll;
   }
   .navbar-menu__item {
     margin-bottom: 20px;
@@ -1738,6 +1738,7 @@ template {
     border: none;
     background-color: #ffffff;
     cursor: pointer;
+    outline: none;
   }
   .menu-button__line {
     width: 16px;

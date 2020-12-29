@@ -48,4 +48,7 @@ menuButton.addEventListener('click', function() {
     document
     .querySelector('.navbar-bottom')
     .classList.toggle('navbar-bottom--visible');
+    document
+    .querySelector('body')
+    .classList.toggle('body');
 });
