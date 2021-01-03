@@ -77,3 +77,22 @@ $(document).ready(function () {
 }
 });
 
+// Обработка форм
+$('.form').each(function(){
+  $(this).validate({
+    errorClass: "invalid",
+    messages: {
+      name: {
+        required: "Please specify your name",
+        minlength: "The name must not be less than 2 letters",
+      },
+      email: {
+        required: "We need your email adress to contact you",
+        email: "Your email adress must be in the format of name@domain.com",
+      },
+      phone: {
+        required: "Phone number is required",
+      },
+    },
+  });
+});
