@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Best your plan - Hotel booking</title>
     <script
+      async
       src="https://api-maps.yandex.ru/2.1/?apikey=59893f20-47e4-42bf-b2d5-a8ca4b22c933&lang=ru_RU"
       type="text/javascript"
     ></script>
@@ -232,7 +233,9 @@
               <button data-toggle="modal" data-href="#booking-modal" class="button booking__button">View Other Options</button>
             </div>
             <!-- /.booking -->
-            <div class="map" id="map"></div>
+            <div class="map">
+              <div class="map-holder" id="map-holder"></div>
+            </div>
             <!-- /.map -->
           </div>
           <!-- /.hotel-right -->

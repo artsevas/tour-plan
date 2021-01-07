@@ -165,7 +165,19 @@
     line-height: 19px
 
 .map
+  position: relative
   border-radius: 10px
   overflow: hidden
   width: 347px
   height: 213px
+  background-image: url(../img/map.png)
+  &-holder
+    position: absolute
+    display: none
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+.map:hover .map-holder
+  display: block
+  

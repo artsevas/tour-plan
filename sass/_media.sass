@@ -98,8 +98,7 @@
 @media (max-width: 768px)
   body
     padding-top: 78px
-  .body
-    overflow: hidden
+
   .container
     max-width: 576px
     width: 92%
@@ -257,6 +256,9 @@
       height: 450px
       &__info
         padding: 25px 11px 20px 20px
+  .modal
+    &__input
+      width: 420px
   .footer
     &__input
       &-group
@@ -303,6 +305,11 @@
         border-radius: 0px 0px 8px 8px
     &-case
       height: 500px
+  .modal
+    &__input
+      width: 400px
+    &__info
+      margin-top: 10px
   .footer
     &-wrapper
       grid-template-columns: 1fr
@@ -349,6 +356,15 @@
       width: 315px
     &__button
       width: 50px
+  .modal
+    &__dialog
+      width: 90%
+      padding: 20px 30px
+    &__input
+      width: 98%
+      margin-left: 0
+    &__message
+      width: 98%
 
 @media (max-width: 320px)
   .stars
