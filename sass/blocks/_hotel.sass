@@ -1,5 +1,5 @@
 .hotel
-  padding-top: 23px
+  padding-top: 15px
   padding-bottom: 70px
   &-info
     @include flex
@@ -11,22 +11,28 @@
       margin-top: 4px
       margin-bottom: 0
     &__description
-      margin: 5px 0
+      margin: 0 0
+    &__button
+      margin-top: 20px
   &-name
     font-size: 24px
     line-height: 30px
+    text-transform: uppercase
   &-wrapper
     display: flex
     flex-wrap: wrap
     align-items: center
+  &__star
+    margin-right: -3px
   &-description
     font-size: 12px
     line-height: 15px
+    letter-spacing: 0.3px
   &-grid
     display: flex
     justify-content: space-between
   &-slider
-    max-width: 720px
+    max-width: 730px
     height: 450px
     margin-left: 0
     &__button
@@ -50,7 +56,7 @@
       &--prev
         left: 18px
         background-image: url(../img/left.svg)
-    &__item
+    &__item, &__img
       width: 100%
       height: 100%
       position: relative
@@ -104,11 +110,12 @@
   color: $light
   border-radius: 8px
   width: 350px
-  min-height: 210px
+  min-height: 190px
+  max-height: 210px
   padding: 28px
   &__info
     @include flex
-    margin-bottom: 9px
+    margin-bottom: 7px
   &__price
     display: flex
     flex-direction: column
@@ -125,10 +132,8 @@
     font-weight: normal
     font-size: 12px
     line-height: 16px
-  &__room
-    margin-top: 4px   
   &__text
-    margin-bottom: 8px
+    margin-bottom: 11px
     font-weight: normal
     font-size: 12px
     line-height: 16px
@@ -147,14 +152,16 @@
     @include flex
     color: inherit
     text-decoration: none
-    font-weight: 600
-    font-size: 16px
-    line-height: 25px
-  &__num
+  &__numb
     margin-left: 8px
+    font-weight: 600
+    font-size: 18px
+    line-height: 25px
   &__button
     width: 100%
-    min-height: 45px
+    min-height: 40px 
+    max-height: 45px
+    padding: 13px 74px
     border-radius: 4px
     border: none
     background-color: $primary
@@ -165,19 +172,9 @@
     line-height: 19px
 
 .map
-  position: relative
   border-radius: 10px
   overflow: hidden
   width: 347px
   height: 213px
   background-image: url(../img/map.png)
-  &-holder
-    position: absolute
-    display: none
-    left: 0
-    top: 0
-    right: 0
-    bottom: 0
-.map:hover .map-holder
-  display: block
   

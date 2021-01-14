@@ -1,12 +1,14 @@
 .reviews
-  padding: 40px 0 70px 0
+  padding: 8px 0 50px 0
   &__title
+    font-family: 'Mulish', sans-serif
     font-style: normal
     font-weight: bold
     font-size: 36px
     line-height: 45px
     text-align: center
     text-transform: uppercase
+    letter-spacing: 0.3px
     margin-bottom: 70px
   &-slider
     &__item
@@ -39,7 +41,7 @@
         background-repeat: no-repeat
     &__button
       position: absolute
-      top: 50%
+      top: 44%
       transform: translateY(-50%)
       width: 30px
       height: 30px
@@ -49,12 +51,13 @@
       border: none
       background-color: transparent
       z-index: 99
+      cursor: pointer
       &--prev
         background-image: url(../img/arrow-prev.svg)
-        left: 0
+        left: 20px
       &--next
         background-image: url(../img/arrow-next.svg)
-        right: 0
+        right: 20px
     &__profile
       display: flex
       flex-direction: column
@@ -73,6 +76,7 @@
       font-size: 12px
       line-height: 15px
       color: $primary
+      margin-top: 0
       margin-bottom: 10px
     &__date
       font-style: normal
@@ -84,6 +88,7 @@
     &__rating
       display: flex
       align-items: center
+      margin-bottom: 2px
     &__text
       margin: auto
       max-width: 537px
@@ -92,3 +97,4 @@
       font-size: 12px
       line-height: 160%
       text-align: justify
+      letter-spacing: 0.4px

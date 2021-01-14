@@ -3,16 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/favicon-32x32.png">
+    <meta name="theme-color" content="#ffffff">
     <title>Best your plan - Hotel booking</title>
     <script
       src="https://api-maps.yandex.ru/2.1/?apikey=59893f20-47e4-42bf-b2d5-a8ca4b22c933&lang=ru_RU"
-      type="text/javascript"
     ></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Nunito:wght@400;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -20,7 +21,7 @@
     <header class="navbar navbar__mobile--fixed">
       <div class="container">
         <div class="navbar-top">
-          <a href="#" class="logo">
+          <a href="https://artsevas.ru/best-tour-plan/" class="logo">
             <img
               src="img/horizontal-logo.svg"
               alt="Logo: Best Tour Plan"
@@ -137,6 +138,7 @@
             <p class="hotel-description hotel-info__description">
               Our manager will call you later.
             </p>
+            <button class="hotel-info__button button"><a href="https://artsevas.ru/best-tour-plan/">Return</a></button>
           </div>
           <!-- /.hotel-info__text -->
           <!-- /.hotel-info__right -->
@@ -154,14 +156,14 @@
               </div>
               <div class="swiper-slide hotel-slider__item">
                 <img
-                  src="https://media.expedia.com/hotels/1000000/930000/921800/921745/4857fdcb_z.jpg"
+                  src="img/slide-2.jpg"
                   class="hotel-slider__img"
                   alt="Slide"
                 />
               </div>
               <div class="swiper-slide hotel-slider__item">
                 <img
-                  src="https://littlebalilove.com/wp-content/uploads/2019/02/42532362_688286944891182_1062082645648736256_o.jpg"
+                  src="img/slide-3.jpg"
                   class="hotel-slider__img"
                   alt="Slide"
                 />
@@ -214,10 +216,11 @@
                 </a>
               </div>
               <!-- /.booking__call-center -->
-              <button class="button booking__button">View Other Options</button>
+              <button data-toggle="modal" data-href="#booking-modal" class="button booking__button">View Other Options</button>
             </div>
             <!-- /.booking -->
-            <div class="map" id="map"></div>
+            <div class="map" id="map">
+            </div>
             <!-- /.map -->
           </div>
           <!-- /.hotel-right -->
@@ -231,11 +234,13 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-wrapper">
-          <img
+          <a href="https://artsevas.ru/best-tour-plan/" class="logo footer__logo">
+            <img
             src="img/vertical-logo.svg"
             alt="Best Tour Plan"
-            class="logo footer__logo"
+            class="logo"
           />
+          </a>
           <div class="footer__list footer__categories">
             <h3 class="footer__title">All categories</h3>
             <ul class="footer__ul">
@@ -336,30 +341,37 @@
             <h3 class="footer__title footer__title--mb-3">Contact Details</h3>
             <p class="footer__text">Feel free to contact us by phone, email or by our contact form</p>
             <ul class="footer__ul">
-              <li class="footer__item footer__icon--mb-2">
+              <li class="footer__item footer__icon--mb-2 footer__item-links">
                 <div class="footer__icon-wrapper"><img src="img/map-marker.svg" alt="Icon: Map" class="footer__icon"></div>
                 <!-- /.footer__icon-wrapper -->
                 9748 Blossom Hill Rd undefined Lansing, Idaho 68545 United States</li>
-              <li class="footer__item footer__icon--mb-2">
+              <li class="footer__item footer__icon--mb-2 footer__item-links">
                 <div class="footer__icon-wrapper"><img src="img/contact-phone-call.svg" alt="Icon: Phone" class="footer__icon"></div>
                 <!-- /.footer__icon-wrapper -->
-                Tel (business hours) : 269 1500 <br>
-                Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00 pm) <br>
-                Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)
+                <div class="footer__links">
+                  <a href="tel:269 1500" class="footer__link">Tel (business hours) : 269 1500</a><br>
+                  <a href="tel:52-56-61-38" class="footer__link">Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00 pm)</a><br>
+                  <a href="tel:52-56-61-38" class="footer__link">Tel (hotline) Sunday:52-56-61-38 (08:00 am – 14:00 pm)</a>
+                </div>
+                <!-- /.footer__links -->
                 </li>
-              <li class="footer__item footer__icon--mb-2">
+              <li class="footer__item footer__icon--mb-2 footer__item-links">
                 <div class="footer__icon-wrapper"><img src="img/email.svg" alt="Icon: Email" class="footer__icon"></div>
                 <!-- /.footer__icon-wrapper -->
-                cherly.lawson@example.com</li>
+                <a href="mailto:cherly.lawson@example.com" class="footer__link">cherly.lawson@example.com</a></li>
             </ul>
           </div>
           <!-- /.footer__contact-details -->
           <div class="footer__contact-form">
             <h3 class="footer__title">Send us a message</h3>
-            <form action="send.php" method="POST" class="footer__form">
-              <input class="input footer__input" placeholder="Your Full Name*" name="name"></input>
-              <input class="input footer__input" placeholder="Phone Number*" name="phone"></input>
-              <textarea class="footer__message" placeholder="Message" name="message"></textarea>
+            <form action="send.php" method="POST" class="form footer__form">
+              <div class="footer__input-group">
+                <input class="input footer__input" placeholder="Your Full Name*" name="name" required>
+              </div>
+              <div class="footer__input-group">
+                <input type="tel" class="input footer__input phone" placeholder="Phone Number*" name="field-name" phone-mask="+7 (999) 999-99-99" required>
+              </div>
+              <textarea class="message footer__message" placeholder="Message" name="message"></textarea>
               <button class="button footer__button">Send</button>
               <span class="footer__info">* Required Fields</span>
             </form>
@@ -367,6 +379,15 @@
           <!-- /.footer__contacts-form -->
         </div>
         <!-- /.footer-wrapper -->
+        <div class="footer__bottom">
+          <div class="footer__items">
+            <a href="#" class="footer__items-link">Disclaimer</a>
+            <a href="#" class="footer__items-link">Conditions of use</a>
+            <a href="#" class="footer__items-link">Cancellation policy</a>
+          </div>
+          <img src="img/companies.jpg" alt="companies" class="footer__companies">
+        </div>
+        <!-- /.footer__bottom -->
       </div>
       <!-- /.container -->
     </footer>
@@ -375,6 +396,10 @@
     <script src="js/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/parallax.min.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script src="js/aos.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

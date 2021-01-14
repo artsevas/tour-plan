@@ -1,8 +1,10 @@
 .parallax-window
   background: transparent
+  max-height: 260px
 .newsletter
   position: relative
-  padding: 98px 0 87px 0
+  padding: 78px 0 87px 0
+  max-height: 260px
   &::before
     content: ''
     position: absolute
@@ -29,6 +31,7 @@
     &__strong
       font-size: 36px
       line-height: 45px
+      letter-spacing: 1.4px
       text-transform: uppercase
 .subscribe
   position: relative
@@ -56,3 +59,4 @@
     border: none
     background-color: $primary
     color: $light
+    cursor: pointer

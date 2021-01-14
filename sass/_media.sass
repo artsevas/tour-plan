@@ -28,15 +28,19 @@
     &__search
       margin-left: auto
     &-menu
-      padding-top: 22px
-      padding-bottom: 22px
+      padding-top: 21px
+      padding-bottom: 21px
+      padding-left: 17px
+      padding-right: 17px
       &__link
         font-size: 12px
         line-height: 15px
   .search
     &__input
-      width: 340px
+      width: 320px
+      padding-left: 5px
   .hotel
+    padding-bottom: 60px
     &-grid
       flex-direction: column
     &__slider
@@ -48,24 +52,44 @@
     width: 340px
   .map
     width: 340px
+  .newsletter
+    padding: 68px 0 77px 0
   .reviews
+    &__title
+      font-weight: bold
+      font-size: 30px
+      line-height: 38px
+      margin-bottom: 50px
     &-slider
       &__item
         max-width: 580px
+      &__button
+        top: 50%
+        &--prev
+          left: 5px
+        &--next
+          right: 5px
   .activities
+    padding-top: 50px
+    padding-bottom: 52px
+    &__title
+      margin-bottom: 60px
     &-wrapper
       flex-wrap: wrap
     &__card
-      margin-bottom: 20px
+      margin-bottom: 25px
   .card
     width: 340px
     height: 250px
+    &__title
+      max-width: 70%
   .packages
     &-row
       grid-template-columns: repeat(2, 1fr)
       column-gap: 30px
       row-gap: 30px
   .footer
+    padding-top: 40px
     &-wrapper
       grid-template-columns: repeat(6, 1fr)
       grid-row-gap: 40px
@@ -75,30 +99,43 @@
     &__logo
       grid-row: 1 / 2
       grid-column: span 2
+      width: 100px
     &__social
       &-network
         grid-row: 1 / 2
         grid-column: span 4
         align-self: center
+        padding-top: 30px
+        margin-left: -50px
     &__categories
       grid-row: 2 / 3
       grid-column: span 2
     &__additional
       grid-column: span 2
+      margin-left: -40px
     &__legal
       grid-column: span 2
+      margin-left: 15px
     &__contact
       &-details
         grid-column: span 5
         grid-row: 3
+        margin-top: 20px    
       &-form
         grid-column: span 5
         grid-row: 4
+        margin-left: -6px
+        width: 540px
+    &__bottom
+      justify-content: space-between
+      margin-top: 60px
+    &__icon
+      &-wrapper
+        margin-left: 10px
 
-@media (max-width: 768px)
+@media (max-width: 767px)
   body
     padding-top: 78px
-
   .container
     max-width: 576px
     width: 92%
@@ -188,6 +225,7 @@
   .map
     width: 100%
   .newsletter
+    padding-top: 30px
     &-wrapper
       flex-direction: column
       align-items: flex-start
@@ -263,6 +301,18 @@
     &__input
       &-group
         flex-basis: 100%
+    &__legal
+      margin-left: -1px
+    &__bottom
+      flex-direction: column
+      justify-content: flex-start
+      margin-left: 0
+      margin-right: 0
+      margin-top: 30px
+      margin-bottom: 21px
+    &__companies
+      margin-top: 10px
+      margin-left: 5px
 
 @media (max-width: 576px)
   .logo
@@ -275,6 +325,7 @@
       margin-bottom: 20px
   .newslatter
     padding: 76px 0 83px 0
+    max-height: 322px
     &-title
       font-size: 20px
       line-height: 25px
@@ -283,10 +334,13 @@
         line-height: 38px
     &__title
       margin-bottom: 37px
+  .parallax-window
+    max-height: 322px
   .subscribe
     width: 100%
   .card
     width: 100%
+    height: 255px
   .packages
     &-row
       grid-template-columns: repeat(1, 1fr)
@@ -318,9 +372,11 @@
       grid-column: 1
     &__social
       &-network
+        margin-left: 0
         grid-row: 2
         grid-column: 1
     &__additional
+      margin-left: 0
       grid-row: 3
       grid-column: 1
     &__categories
@@ -344,13 +400,58 @@
       order: 2
 
 @media (max-width: 480px)
+  .conainer
+    margin-left: 20px
+    margin-right: 20px
+  .navbar
+    &-top
+      padding-top: 22px
+      padding-left: 10px
+      padding-right: 10px
+  .breadcrumb
+    &-list
+      padding-top: 10px
+  .hotel
+    padding-top: 2px
+    padding-left: 10px
+    padding-right: 10px
+    &-grid
+      padding-top: 18px
+    &-slider
+      height: 180px
   .stars
     flex-basis: 20%
+  .booking
+    &__button
+      padding: 13px 44px
+  .map
+    margin-top: -50px
+  .reviews
+    &__title
+      max-width: 230px
+      margin-left: 30px
+      font-size: 18px
+      line-height: 23px
+      margin-top: 5px
+  .activities
+    padding-left: 10px
+    padding-top: 20px
+    padding-bottom: 30px
+    &__title
+      font-size: 18px
+      line-height: 23px
+      margin-bottom: 35px
+  .card
+    width: 281px
   .packages
     &-card
       height: 500px
       &__text
         display: none
+      &__button
+        font-weight: 600
+        font-size: 12px
+        line-height: 16px
   .search
     &__input
       width: 315px
@@ -365,6 +466,83 @@
       margin-left: 0
     &__message
       width: 98%
+    &__button
+      margin-right: 17px
+  .footer
+    padding-left: 10px
+    padding-bottom: 20px
+    &__bottom
+      max-width: 280px
+    &__items
+      width: 100%
+      margin-right: 0
+    &-wrapper
+      grid-template-columns: 1fr
+    &__logo
+      grid-row: 1
+      grid-column: 1
+    &__title
+      margin-bottom: 20px
+    &__social
+      &-network
+        padding-top: 0
+        margin-left: 0
+        grid-row: 2
+        grid-column: 1
+        display: flex
+        flex-direction: column
+    &__additional
+      margin-left: 0
+      grid-row: 4
+      grid-column: 1
+      padding-bottom: 0
+      margin-bottom: 0
+    &__categories
+      margin-top: 0
+      margin-bottom: 0
+      padding-bottom: 0
+      grid-row: 5
+      grid-column: 1
+    &__legal
+      grid-row: 3
+      grid-column: 1
+    &__contact
+      &-details
+        margin-top: -20px
+        margin-bottom: 60px
+        margin-left: -10px
+        grid-row: 6
+        grid-column: 1
+        max-width: 280px
+      &-form
+        grid-row: 7
+        grid-column: 1
+        width: 280px
+    &__links
+      padding-left: -20px
+    &__text
+      margin-bottom: 30px
+    &__item
+      &-links
+        margin-left: 0
+    &__info
+      flex-basis: 100%
+      order: 1
+      margin-bottom: 10px
+    &__button
+      order: 2
+    &__items
+      margin-left: -10px
+      margin-right: 0
+      &-link
+        font-size: 12px
+        line-height: 15px
+        width: 310px
+        margin-right: 0
+        margin-left: 0
+      &-companies
+        margin-top: 10px
+        margin-left: 0
 
 @media (max-width: 320px)
   .stars
@@ -372,3 +550,6 @@
   .search
     &__input
       width: 260px
+  .booking
+    &__button
+      padding: 10px 44px

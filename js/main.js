@@ -10,9 +10,10 @@ $(document).ready(function () {
   });
 
 // Карта
+$('.map').on('mouseover', function(){
   ymaps.ready(init);
   function init() {
-    var myMap = new ymaps.Map("map-holder",{
+    var myMap = new ymaps.Map("map",{
           center: [7.890703, 98.294772],
           zoom: 17,
         },{searchControlProvider: "yandex#search",}
@@ -34,6 +35,7 @@ $(document).ready(function () {
       );
     myMap.geoObjects.add(myGeoObject);
   };
+});
 
 // Слайдер в блоке Reviews
   var reviewsSlider = new Swiper(".reviews-slider", {
@@ -60,6 +62,7 @@ $(document).ready(function () {
     var targetModal = $(this).attr("data-href");
     $(targetModal).find(".modal__overlay").addClass("modal__overlay--visible");
     $(targetModal).find(".modal__dialog").addClass("modal__dialog--visible");
+    document.getElementsByTagName("body")[0].style.overflow = "hidden";
   }
 
   function closeModal(event) {
@@ -68,6 +71,7 @@ $(document).ready(function () {
     var modalDialog = $('.modal__dialog');
     modalOverlay.removeClass('modal__overlay--visible');
     modalDialog.removeClass('modal__dialog--visible');
+    document.getElementsByTagName("body")[0].style.overflow = "auto";
 }
 
 // Обработка форм
@@ -92,7 +96,7 @@ $(document).ready(function () {
 
 // Mask
   $(document).ready(function(){
-    $('.phone').mask('+7 (999) 999-99-99');
+    $(".phone").mask('+79999999999?9', {placeholder: ''});
   });
 
   AOS.init();

@@ -3,16 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/favicon-32x32.png">
+    <meta name="theme-color" content="#ffffff">
     <title>Best your plan - Hotel booking</title>
     <script
-      async
       src="https://api-maps.yandex.ru/2.1/?apikey=59893f20-47e4-42bf-b2d5-a8ca4b22c933&lang=ru_RU"
-      type="text/javascript"
     ></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Nunito:wght@400;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/style.css" />
@@ -22,11 +21,12 @@
     <header class="navbar navbar__mobile--fixed">
       <div class="container">
         <div class="navbar-top">
-          <a href="#" class="logo">
+          <a href="https://artsevas.ru/best-tour-plan/" class="logo">
             <img
               src="img/horizontal-logo.svg"
               alt="Logo: Best Tour Plan"
               class="logo__image"
+              loading="lazy"
             />
           </a>
           <form action="#" class="search navbar__search navbar__search--mobile--hidden">
@@ -36,7 +36,7 @@
               placeholder="Search location"
             />
             <button class="search__button">
-              <img src="img/search.svg" alt="Icon: Search" />
+              <img src="img/search.svg" alt="Icon: Search" loading="lazy"/>
             </button>
           </form>
           <!-- /.navbar__search -->
@@ -45,6 +45,7 @@
               src="img/user-avatar.jpeg"
               alt="Avatar: Nathan"
               class="user__avatar"
+              loading="lazy"
             />
             <span class="user__name user__name--light">Nathan</span>
           </a>
@@ -67,6 +68,7 @@
                   src="img/user-avatar.jpeg"
                   alt="Avatar: Nathan"
                   class="user__avatar"
+                  loading="lazy"
                 />
                 <span class="user__name">Nathan</span>
               </a>
@@ -79,7 +81,7 @@
                   placeholder="Search location"
                 />
                 <button class="search__button">
-                  <img src="img/search.svg" alt="Icon: Search" />
+                  <img src="img/search.svg" alt="Icon: Search" loading="lazy"/>
                 </button>
               </form>
             </li>
@@ -134,11 +136,11 @@
           <div class="hotel-info__text">
             <div class="hotel-wrapper">
               <div class="stars">
-                <img src="img/Star.svg" alt="Star" />
-                <img src="img/Star.svg" alt="Star" />
-                <img src="img/Star.svg" alt="Star" />
-                <img src="img/Star.svg" alt="Star" />
-                <img src="img/Star.svg" alt="Star" />
+                <img src="img/Star.svg" alt="Star" class="hotel__star" loading="lazy"/>
+                <img src="img/Star.svg" alt="Star" class="hotel__star" loading="lazy"/>
+                <img src="img/Star.svg" alt="Star" class="hotel__star" loading="lazy"/>
+                <img src="img/Star.svg" alt="Star" class="hotel__star" loading="lazy"/>
+                <img src="img/Star.svg" alt="Star" loading="lazy"/>
               </div>
               <!-- /.stars -->
               <h1 class="hotel-name hotel-info__name">Grand hilton hotel</h1>
@@ -166,6 +168,7 @@
                   src="img/slide.jpg"
                   class="hotel-slider__img"
                   alt="Slide"
+                  loading="lazy"
                 />
               </div>
               <div class="swiper-slide hotel-slider__item">
@@ -173,6 +176,7 @@
                   src="img/slide-2.jpg"
                   class="hotel-slider__img"
                   alt="Slide"
+                  loading="lazy"
                 />
               </div>
               <div class="swiper-slide hotel-slider__item">
@@ -180,6 +184,7 @@
                   src="img/slide-3.jpg"
                   class="hotel-slider__img"
                   alt="Slide"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -205,6 +210,7 @@
                       src="img/user.svg"
                       alt="Icon: user"
                       class="booking__icon"
+                      loading="lazy"
                     />
                     <span class="booking__description">2 x Guests</span>
                   </div>
@@ -214,6 +220,7 @@
                       src="img/home.svg"
                       alt="Icon: user"
                       class="booking__icon"
+                      loading="lazy"
                     />
                     <span class="booking__description">1 x Room</span>
                   </div>
@@ -225,7 +232,7 @@
               <div class="booking__call-center">
                 <span class="booking__heading">Quick Booking</span>
                 <a href="tell:12100" class="booking__number">
-                  <img src="img/phone-call.svg" alt="Icon: phone" />
+                  <img src="img/phone-call.svg" alt="Icon: phone" loading="lazy"/>
                   <span class="booking__numb">12100</span>
                 </a>
               </div>
@@ -233,8 +240,7 @@
               <button data-toggle="modal" data-href="#booking-modal" class="button booking__button">View Other Options</button>
             </div>
             <!-- /.booking -->
-            <div class="map">
-              <div class="map-holder" id="map-holder"></div>
+            <div class="map" id="map">
             </div>
             <!-- /.map -->
           </div>
@@ -256,17 +262,18 @@
                 src="img/package-1.jpg"
                 alt="Hotel Blue Haven"
                 class="packages-card__img"
+                loading="lazy"
               />
               <span class="packages-card__offer">Flash Offer</span>
             </div>
             <!-- /.packages-card__left -->
             <div class="packages-card__right">
               <div class="packages-card__rating">
-                <img src="img/Star.svg" alt="Star" />
-                <img src="img/Star.svg" alt="Star" />
-                <img src="img/Star.svg" alt="Star" />
-                <img src="img/Star.svg" alt="Star" />
-                <img src="img/Star.svg" alt="Star" />
+                <img src="img/Star.svg" alt="Star" class="packages-card__star" loading="lazy"/>
+                <img src="img/Star.svg" alt="Star" class="packages-card__star" loading="lazy"/>
+                <img src="img/Star.svg" alt="Star" class="packages-card__star" loading="lazy"/>
+                <img src="img/Star.svg" alt="Star" class="packages-card__star" loading="lazy"/>
+                <img src="img/Star.svg" alt="Star" loading="lazy"/>
               </div>
               <!-- /.stars -->
               <h3 class="packages-card__title">Hotel Blue Haven</h3>
@@ -278,26 +285,26 @@
                 mollit. Ipsum est fugiat velit ea ullamco do
               </p>
               <div class="packages-card__map">
-                <img src="img/map-pin.svg" alt="Icon: map-pin" />
+                <img src="img/map-pin.svg" alt="Icon: map-pin" loading="lazy"/>
                 <span class="packages-card__description"
                   >1749 Wheeler Ridge Delaware</span
                 >
               </div>
               <!-- /.packages-card__map -->
               <div class="packages-card__guests">
-                <img src="img/user.svg" alt="Icon: guest" />
+                <img src="img/user.svg" alt="Icon: guest" loading="lazy"/>
                 <span class="packages-card__description">2 x Guests</span>
               </div>
               <!-- /.packages-cars__guests -->
               <div class="packages-card__room">
-                <img src="img/home.svg" alt="Icon: home" />
+                <img src="img/home.svg" alt="Icon: home" loading="lazy"/>
                 <span class="packages-card__description">1 x Room</span>
               </div>
               <!-- /.packages-card__room -->
               <span class="packages-card__price-old">$ 10,500</span>
               <div class="packages-card__price">
                 <span class="packages-card__price-new">$ 8,500</span>
-                <button class="packages-card__button">Book Now</button>
+                <button class="packages-card__button" data-toggle="modal" data-href="#booking-modal">Book Now</button>
               </div>
               <!-- /.packages-card__price -->
             </div>
@@ -310,33 +317,34 @@
                 src="img/package-2.jpg"
                 alt="LUX* Belle Mare"
                 class="packages-case__img"
+                loading="lazy"
               />
               <span class="packages-case__offer">Flash Offer</span>
             </div>
             <!-- /.packages-case__header -->
             <div class="packages-case__info">
               <h3 class="packages-case__title">LUX* Belle Mare</h3>
-              <div class="packages-card__map">
+              <div class="packages-case__map">
                 <img src="img/map-pin.svg" alt="Icon: map-pin" />
-                <span class="packages-card__description"
+                <span class="packages-case__description"
                   >1749 Wheeler Ridge Delaware</span
                 >
               </div>
               <!-- /.packages-card__map -->
-              <div class="packages-card__guests">
-                <img src="img/user.svg" alt="Icon: guest" />
-                <span class="packages-card__description">2 x Guests</span>
+              <div class="packages-case__guests">
+                <img src="img/user.svg" alt="Icon: guest" loading="lazy"/>
+                <span class="packages-case__description">2 x Guests</span>
               </div>
               <!-- /.packages-cars__guests -->
               <div class="packages-case__room">
-                <img src="img/home.svg" alt="Icon: home" />
-                <span class="packages-card__description">1 x Room</span>
+                <img src="img/home.svg" alt="Icon: home" loading="lazy"/>
+                <span class="packages-case__description">1 x Room</span>
               </div>
               <!-- /.packages-case__room -->
               <span class="packages-card__price-old">$ 8,500</span>
               <div class="packages-card__price">
                 <span class="packages-card__price-new">$ 3,000</span>
-                <button class="packages-card__button">Book Now</button>
+                <button class="packages-card__button" data-toggle="modal" data-href="#booking-modal">Book Now</button>
               </div>
               <!-- /.packages-card__price -->
             </div>
@@ -349,33 +357,34 @@
                 src="img/package-3.jpg"
                 alt="White Palace"
                 class="packages-case__img"
+                loading="lazy"
               />
               <span class="packages-case__offer">Flash Offer</span>
             </div>
             <!-- /.packages-case__header -->
             <div class="packages-case__info">
               <h3 class="packages-case__title">White Palace</h3>
-              <div class="packages-card__map">
-                <img src="img/map-pin.svg" alt="Icon: map-pin" />
-                <span class="packages-card__description"
+              <div class="packages-case__map">
+                <img src="img/map-pin.svg" alt="Icon: map-pin" loading="lazy"/>
+                <span class="packages-case__description"
                   >1749 Wheeler Ridge Delaware</span
                 >
               </div>
               <!-- /.packages-card__map -->
-              <div class="packages-card__guests">
-                <img src="img/user.svg" alt="Icon: guest" />
-                <span class="packages-card__description">2 x Guests</span>
+              <div class="packages-case__guests">
+                <img src="img/user.svg" alt="Icon: guest" loading="lazy"/>
+                <span class="packages-case__description">2 x Guests</span>
               </div>
               <!-- /.packages-cars__guests -->
               <div class="packages-case__room">
-                <img src="img/home.svg" alt="Icon: home" />
-                <span class="packages-card__description">1 x Room</span>
+                <img src="img/home.svg" alt="Icon: home" loading="lazy"/>
+                <span class="packages-case__description">1 x Room</span>
               </div>
               <!-- /.packages-case__room -->
               <span class="packages-card__price-old">$ 10,500</span>
               <div class="packages-card__price">
                 <span class="packages-card__price-new">$ 9,500</span>
-                <button class="packages-card__button">Book Now</button>
+                <button class="packages-card__button" data-toggle="modal" data-href="#booking-modal">Book Now</button>
               </div>
               <!-- /.packages-card__price -->
             </div>
@@ -388,33 +397,34 @@
                 src="img/package-4.jpg"
                 alt="Luxury Place"
                 class="packages-case__img"
+                loading="lazy"
               />
               <span class="packages-case__offer">Flash Offer</span>
             </div>
             <!-- /.packages-case__header -->
             <div class="packages-case__info">
               <h3 class="packages-case__title">Luxury Place</h3>
-              <div class="packages-card__map">
-                <img src="img/map-pin.svg" alt="Icon: map-pin" />
-                <span class="packages-card__description"
+              <div class="packages-case__map">
+                <img src="img/map-pin.svg" alt="Icon: map-pin" loading="lazy"/>
+                <span class="packages-case__description"
                   >1749 Wheeler Ridge Delaware</span
                 >
               </div>
               <!-- /.packages-card__map -->
-              <div class="packages-card__guests">
-                <img src="img/user.svg" alt="Icon: guest" />
-                <span class="packages-card__description">2 x Guests</span>
+              <div class="packages-case__guests">
+                <img src="img/user.svg" alt="Icon: guest" loading="lazy"/>
+                <span class="packages-case__description">2 x Guests</span>
               </div>
               <!-- /.packages-cars__guests -->
               <div class="packages-case__room">
-                <img src="img/home.svg" alt="Icon: home" />
-                <span class="packages-card__description">1 x Room</span>
+                <img src="img/home.svg" alt="Icon: home" loading="lazy"/>
+                <span class="packages-case__description">1 x Room</span>
               </div>
               <!-- /.packages-case__room -->
               <span class="packages-card__price-old">$ 4,500</span>
               <div class="packages-card__price">
                 <span class="packages-card__price-new">$ 2,500</span>
-                <button class="packages-card__button">Book Now</button>
+                <button class="packages-card__button" data-toggle="modal" data-href="#booking-modal">Book Now</button>
               </div>
               <!-- /.packages-card__price -->
             </div>
@@ -427,33 +437,34 @@
                 src="img/package-5.jpg"
                 alt="Hotel Five Star"
                 class="packages-case__img"
+                loading="lazy"
               />
               <span class="packages-case__offer">Flash Offer</span>
             </div>
             <!-- /.packages-case__header -->
             <div class="packages-case__info">
               <h3 class="packages-case__title">Hotel Five Star</h3>
-              <div class="packages-card__map">
-                <img src="img/map-pin.svg" alt="Icon: map-pin" />
-                <span class="packages-card__description"
+              <div class="packages-case__map">
+                <img src="img/map-pin.svg" alt="Icon: map-pin" loading="lazy"/>
+                <span class="packages-case__description"
                   >1749 Wheeler Ridge Delaware</span
                 >
               </div>
               <!-- /.packages-card__map -->
-              <div class="packages-card__guests">
-                <img src="img/user.svg" alt="Icon: guest" />
-                <span class="packages-card__description">2 x Guests</span>
+              <div class="packages-case__guests">
+                <img src="img/user.svg" alt="Icon: guest" loading="lazy"/>
+                <span class="packages-case__description">2 x Guests</span>
               </div>
               <!-- /.packages-cars__guests -->
               <div class="packages-case__room">
-                <img src="img/home.svg" alt="Icon: home" />
-                <span class="packages-card__description">1 x Room</span>
+                <img src="img/home.svg" alt="Icon: home" loading="lazy"/>
+                <span class="packages-case__description">1 x Room</span>
               </div>
               <!-- /.packages-case__room -->
               <span class="packages-card__price-old">$ 6,500</span>
               <div class="packages-card__price">
                 <span class="packages-card__price-new">$ 3,500</span>
-                <button class="packages-card__button">Book Now</button>
+                <button class="packages-card__button" data-toggle="modal" data-href="#booking-modal">Book Now</button>
               </div>
               <!-- /.packages-card__price -->
             </div>
@@ -494,7 +505,7 @@
 
     <section class="reviews">
       <div class="container">
-        <h2 class="reviews__title">What people think about us</h2>
+        <h2 class="reviews__title">What people thinks about us</h2>
         <div class="swiper-container reviews-slider">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -504,15 +515,16 @@
                     src="img/reviews-avatar.jpeg"
                     alt="Photo: Megan Fox"
                     class="reviews-slider__avatar"
+                    loading="lazy"
                   />
                   <h3 class="reviews-slider__username">Megan Fox</h3>
                   <span class="reviews-slider__date">Stayed 18 Nov, 2019</span>
                   <div class="reviews-slider__rating">
-                    <img src="img/Star.svg" alt="Star" />
-                    <img src="img/Star.svg" alt="Star" />
-                    <img src="img/Star.svg" alt="Star" />
-                    <img src="img/Star.svg" alt="Star" />
-                    <img src="img/Star.svg" alt="Star" />
+                    <img src="img/Star.svg" alt="Star" loading="lazy"/>
+                    <img src="img/Star.svg" alt="Star" loading="lazy"/>
+                    <img src="img/Star.svg" alt="Star" loading="lazy"/>
+                    <img src="img/Star.svg" alt="Star" loading="lazy"/>
+                    <img src="img/Star.svg" alt="Star" loading="lazy"/>
                   </div>
                   <!-- /.rating -->
                 </div>
@@ -536,17 +548,18 @@
               <div class="reviews-slider__item">
                 <div class="reviews-slider__profile">
                   <img
-                    src="img/reviews-avatar-second.jpeg"
+                    src="img/reviews-avatar-second.jpg"
                     alt="Photo: John"
                     class="reviews-slider__avatar"
+                    loading="lazy"
                   />
                   <h3 class="reviews-slider__username">John</h3>
                   <span class="reviews-slider__date">Stayed 18 Mar, 2019</span>
                   <div class="reviews-slider__rating">
-                    <img src="img/Star.svg" alt="Star" />
-                    <img src="img/Star.svg" alt="Star" />
-                    <img src="img/Star.svg" alt="Star" />
-                    <img src="img/Star.svg" alt="Star" />
+                    <img src="img/Star.svg" alt="Star" loading="lazy"/>
+                    <img src="img/Star.svg" alt="Star" loading="lazy"/>
+                    <img src="img/Star.svg" alt="Star" loading="lazy"/>
+                    <img src="img/Star.svg" alt="Star" loading="lazy"/>
                   </div>
                   <!-- /.rating -->
                 </div>
@@ -590,9 +603,10 @@
               src="img/card__img-1.jpg"
               alt="The curious corner of chamarel"
               class="card__img"
+              loading="lazy"
             />
-            <h3 class="card__title">The curious corner of chamarel</h3>
-            <button class="card__button">Book Now</button>
+            <h3 class="card__title">The curious corner of&nbsp;chamarel</h3>
+            <button class="card__button" data-toggle="modal" data-href="#booking-modal">Book Now</button>
           </div>
           <!-- /.card -->
           <div class="card activities__card">
@@ -600,9 +614,10 @@
               src="img/card__img-2.jpg"
               alt="Gymkhana club golf course"
               class="card__img"
+              loading="lazy"
             />
             <h3 class="card__title">Gymkhana club golf course</h3>
-            <button class="card__button">Book Now</button>
+            <button class="card__button" data-toggle="modal" data-href="#booking-modal">Book Now</button>
           </div>
           <!-- /.card -->
           <div class="card activities__card">
@@ -610,9 +625,10 @@
               src="img/card__img-3.jpg"
               alt="Tamarind falls hiking trip - full day"
               class="card__img"
+              loading="lazy"
             />
-            <h3 class="card__title">Tamarind falls hiking trip - full day</h3>
-            <button class="card__button">Book Now</button>
+            <h3 class="card__title">Tamarind falls hiking trip&nbsp;-&nbsp;full day</h3>
+            <button class="card__button" data-toggle="modal" data-href="#booking-modal">Book Now</button>
           </div>
           <!-- /.card -->
           <div class="card activities__card">
@@ -620,9 +636,10 @@
               src="img/card__img-4.jpg"
               alt="The blue marine discovery quest"
               class="card__img"
+              loading="lazy"
             />
             <h3 class="card__title">The blue marine discovery quest</h3>
-            <button class="card__button">Book Now</button>
+            <button class="card__button" data-toggle="modal" data-href="#booking-modal">Book Now</button>
           </div>
           <!-- /.card -->
         </div>
@@ -635,11 +652,14 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-wrapper">
-          <img
+          <a href="https://artsevas.ru/best-tour-plan/" class="logo footer__logo">
+            <img
             src="img/vertical-logo.svg"
             alt="Best Tour Plan"
-            class="logo footer__logo"
+            class="logo"
+            loading="lazy"
           />
+          </a>
           <div class="footer__list footer__categories">
             <h3 class="footer__title">All categories</h3>
             <ul class="footer__ul">
@@ -703,16 +723,19 @@
                 ><img
                   src="img/facebook.svg"
                   alt="Icon: Facebook"
+                  loading="lazy"
               /></a>
               <a href="#" class="footer__link"
                 ><img
                   src="img/youtube.svg"
                   alt="Icon: Youtube"
+                  loading="lazy"
               /></a>
               <a href="#" class="footer__link"
                 ><img
                   src="img/instagram.svg"
                   alt="Icon: Instagram"
+                  loading="lazy"
               /></a>
             </div>
             <!-- /.footer__social-links -->
@@ -740,21 +763,24 @@
             <h3 class="footer__title footer__title--mb-3">Contact Details</h3>
             <p class="footer__text">Feel free to contact us by phone, email or by our contact form</p>
             <ul class="footer__ul">
-              <li class="footer__item footer__icon--mb-2">
-                <div class="footer__icon-wrapper"><img src="img/map-marker.svg" alt="Icon: Map" class="footer__icon"></div>
+              <li class="footer__item footer__icon--mb-2 footer__item-links">
+                <div class="footer__icon-wrapper"><img src="img/map-marker.svg" alt="Icon: Map" class="footer__icon" loading="lazy"></div>
                 <!-- /.footer__icon-wrapper -->
                 9748 Blossom Hill Rd undefined Lansing, Idaho 68545 United States</li>
-              <li class="footer__item footer__icon--mb-2">
-                <div class="footer__icon-wrapper"><img src="img/contact-phone-call.svg" alt="Icon: Phone" class="footer__icon"></div>
+              <li class="footer__item footer__icon--mb-2 footer__item-links">
+                <div class="footer__icon-wrapper"><img src="img/contact-phone-call.svg" alt="Icon: Phone" class="footer__icon" loading="lazy"></div>
                 <!-- /.footer__icon-wrapper -->
-                Tel (business hours) : 269 1500 <br>
-                Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00 pm) <br>
-                Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)
+                <div class="footer__links">
+                  <a href="tel:269 1500" class="footer__link">Tel (business hours) : 269 1500</a><br>
+                  <a href="tel:52-56-61-38" class="footer__link">Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00 pm)</a><br>
+                  <a href="tel:52-56-61-38" class="footer__link">Tel (hotline) Sunday:52-56-61-38 (08:00 am – 14:00 pm)</a>
+                </div>
+                <!-- /.footer__links -->
                 </li>
-              <li class="footer__item footer__icon--mb-2">
-                <div class="footer__icon-wrapper"><img src="img/email.svg" alt="Icon: Email" class="footer__icon"></div>
+              <li class="footer__item footer__icon--mb-2 footer__item-links">
+                <div class="footer__icon-wrapper"><img src="img/email.svg" alt="Icon: Email" class="footer__icon" loading="lazy"></div>
                 <!-- /.footer__icon-wrapper -->
-                cherly.lawson@example.com</li>
+                <a href="mailto:cherly.lawson@example.com" class="footer__link">cherly.lawson@example.com</a></li>
             </ul>
           </div>
           <!-- /.footer__contact-details -->
@@ -762,10 +788,10 @@
             <h3 class="footer__title">Send us a message</h3>
             <form action="send.php" method="POST" class="form footer__form">
               <div class="footer__input-group">
-                <input class="input footer__input" placeholder="Your Full Name*" name="name" required></input>
+                <input class="input footer__input" placeholder="Your Full Name*" name="name" required>
               </div>
               <div class="footer__input-group">
-                <input type="phone" class="input footer__input phone" placeholder="Phone Number*" name="field-name" phone-mask="+7 (999) 999-99-99" required></input>
+                <input type="tel" class="input footer__input phone" placeholder="Phone Number*" name="field-name" phone-mask="+7 (999) 999-99-99" required>
               </div>
               <textarea class="message footer__message" placeholder="Message" name="message"></textarea>
               <button class="button footer__button">Send</button>
@@ -775,6 +801,15 @@
           <!-- /.footer__contacts-form -->
         </div>
         <!-- /.footer-wrapper -->
+        <div class="footer__bottom">
+          <div class="footer__items">
+            <a href="#" class="footer__items-link">Disclaimer</a>
+            <a href="#" class="footer__items-link">Conditions of use</a>
+            <a href="#" class="footer__items-link">Cancellation policy</a>
+          </div>
+          <img src="img/companies.jpg" alt="companies" class="footer__companies" loading="lazy">
+        </div>
+        <!-- /.footer__bottom -->
       </div>
       <!-- /.container -->
     </footer>
@@ -789,9 +824,9 @@
         </a>
         <h3 class="modal__title">Booking</h3>
         <form action="send.php" method="POST" class="form modal__form">
-          <input class="input modal__input" placeholder="Your Full Name*" name="name" required minlength="2"></input>
-          <input type="tel" class="input modal__input phone" placeholder="Phone Number*" name="field-name" phone-mask="+7 (999) 999-99-99" required></input>
-          <input type="email" class="input modal__input" placeholder="Email*" name="email" required></input>
+          <input class="input modal__input" placeholder="Your Full Name*" name="name" required minlength="2">
+          <input type="tel" class="input modal__input phone" placeholder="Phone Number*" name="field-name" phone-mask="+7 (999) 999-99-99" required>
+          <input type="email" class="input modal__input" placeholder="Email*" name="email" required>
           <textarea class="message modal__message" placeholder="Message" name="message"></textarea>
           <button class="button modal__button">Send</button>
           <span class="modal__info">* Required Fields</span>
@@ -809,9 +844,9 @@
         </a>
         <h3 class="modal__title">Send us a feedback</h3>
         <form action="send.php" method="POST" class="form modal__form">
-          <input class="input modal__input" placeholder="Your Full Name*" name="name" required minlength="2"></input>
-          <input type="tel" class="input modal__input phone" placeholder="Phone Number*" name="field-name" phone-mask="+7 (999) 999-99-99" required></input>
-          <input type="email" class="input modal__input" placeholder="Email*" name="email" required></input>
+          <input class="input modal__input" placeholder="Your Full Name*" name="name" required minlength="2">
+          <input type="tel" class="input modal__input phone" placeholder="Phone Number*" name="field-name" phone-mask="+7 (999) 999-99-99" required>
+          <input type="email" class="input modal__input" placeholder="Email*" name="email" required>
           <textarea class="message modal__message" placeholder="Message" name="message"></textarea>
           <button class="button modal__button">Send</button>
           <span class="modal__info">* Required Fields</span>
